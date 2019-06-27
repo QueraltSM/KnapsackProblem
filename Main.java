@@ -4,7 +4,7 @@ public class Main {
     static Item item1 = new Item(8,13);
     static Item item2 = new Item(3,7);
     static Item item3 = new Item(5,10);
-    static Item item4 = new Item(1,1);
+    static Item item4 = new Item(2,1);
     static Item item5 = new Item(2,1);
     static Item item6 = new Item(2,1);
     static List<Item> items = new ArrayList<Item>();
@@ -20,5 +20,7 @@ public class Main {
         System.out.println("Total price = " + bag.getStrategy1(items));
         System.out.println("\nStrategy 2 - First the least heavy: ");
         System.out.println("Total price = " + bag.getStrategy2(items));
+        System.out.println("\nStrategy 3 - Calculation of dollar/kg: ");
+        System.out.println("Total price = " + bag.getStrategy3(items));
     }
 }
