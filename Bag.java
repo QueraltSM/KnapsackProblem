@@ -29,6 +29,20 @@ public class Bag {
         }
         return finalPrice;
     }
+    
+    public int getStrategy2(List<Item> items) {
+        int finalWeight = 0;
+        int finalPrice = 0;
+        Collections.sort(items);
+        for (Item item : items) {
+            if (item.getWeight() + finalWeight <= capacity) {
+                finalWeight += item.getWeight();
+                finalPrice += item.getPrice();
+                System.out.println(item.getWeight());
+            }
+        }
+        return finalPrice;
+    }
 }
 
 
